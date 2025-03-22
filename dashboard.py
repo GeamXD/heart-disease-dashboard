@@ -456,5 +456,5 @@ with agg_col[1]:
     count_df = count_contents(df, group_col1.lower())
 
     # Display the aggregated DataFrame
-    st.write("### Aggregated Data")
+    st.write("### Table Summary")
     st.dataframe(count_df, use_container_width=True)
