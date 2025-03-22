@@ -346,47 +346,55 @@ with metric_col[3]:
     ui.metric_card(title="Exercise Angina", content=num_exerc_angina, description="Total", key='card4')
 
 # Separator
-st.markdown("---")
+# st.markdown("---")
 
 # Pie charts
 pie_cols = st.columns(3)
 with pie_cols[0]:
-    st.plotly_chart(gender_pie, use_container_width=True)
+    pi_container = st.container(border=True)
+    pi_container.plotly_chart(gender_pie, use_container_width=True)
 with pie_cols[1]:
-    st.plotly_chart(fbs_pie, use_container_width=True)
+    pi_container2 = st.container(border=True)
+    pi_container2.plotly_chart(fbs_pie, use_container_width=True)
 with pie_cols[2]:
-    st.plotly_chart(disease_status_pie, use_container_width=True)
+    pi_container3 = st.container(border=True)
+    pi_container3.plotly_chart(disease_status_pie, use_container_width=True)
 
 # Separator
-st.markdown("---")
+# st.markdown("---")
 
 
 # Histograms
 hist_cols = st.columns(2)
 with hist_cols[0]:
-    st.plotly_chart(max_hr_hist, use_container_width=True)
+    hist_con = st.container(border=True)
+    hist_con.plotly_chart(max_hr_hist, use_container_width=True)
 with hist_cols[1]:
-    st.plotly_chart(age_hist, use_container_width=True)
+    hist_con2 = st.container(border=True)
+    hist_con2.plotly_chart(age_hist, use_container_width=True)
 
 # Separator
-st.markdown("---")
+# st.markdown("---")
 
     
 # bar charts - SIMPLE
 bar_cols = st.columns(2)
 with bar_cols[0]:
-    st.plotly_chart(chest_paintype_bar, use_container_width=True)
+    bar_con = st.container(border=True)
+    bar_con.plotly_chart(chest_paintype_bar, use_container_width=True)
 with bar_cols[1]:
-    st.plotly_chart(rest_ecg_bar, use_container_width=True)
+    bar_con2 = st.container(border=True)
+    bar_con2.plotly_chart(rest_ecg_bar, use_container_width=True)
 
 # Separator
-st.markdown("---")
+# st.markdown("---")
 
 
 # Bar charts with table
 bar_cols2 = st.columns(2)
 with bar_cols2[0]:
-    st.plotly_chart(age_group_bar, use_container_width=True)
+    br_con = st.container(border=True)
+    br_con.plotly_chart(age_group_bar, use_container_width=True)
 with bar_cols2[1]:
     st.write('')
     st.write('')
@@ -405,9 +413,11 @@ st.markdown("---")
 # Bar charts - complex
 bar_cols = st.columns(2)
 with bar_cols[0]:
-    st.plotly_chart(age_group_by_disease_status, use_container_width=True)
+    comp_con = st.container(border=True)
+    comp_con.plotly_chart(age_group_by_disease_status, use_container_width=True)
 with bar_cols[1]:
-    st.plotly_chart(age_group_by_st_slope, use_container_width=True)
+    comp_con1 = st.container(border=True)
+    comp_con1.plotly_chart(age_group_by_st_slope, use_container_width=True)
 
 # Separator
 st.markdown("---")
